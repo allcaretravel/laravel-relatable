@@ -1,4 +1,4 @@
-**NOTE: This package is not registered on Packagist and is abandoned. It's only being use in a few internal projects at Spatie**
+**NOTE: This project is forked from `spatie/laravel-relatable`**
 
 # Trait to Manage an Eloquent Model's Related Content
 
@@ -44,30 +44,20 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require spatie/laravel-relatable
-```
-
-In order to publish the migrations and configuration file, you'll need to register the service provider:
-
-```php
-// config/app.php
-'providers' => [
-    // ...
-    Spatie\Relatable\RelatableServiceProvider::class,
-];
+composer require allcaretravel/laravel-relatable
 ```
 
 If you want to specify a custom table name, you'll need to publish and edit 
 the configuration file:
 
 ```bash
-php artisan vendor:publish --provider="Spatie\Relatable\RelatableServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Act\Relatable\RelatableServiceProvider" --tag="config"
 ```
 
 Publishing and running the migrations is mandatory:
 
 ```bash
-php artisan vendor:publish --provider="Spatie\Relatable\RelatableServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="Act\Relatable\RelatableServiceProvider" --tag="migrations"
 php artisan migrate
 ```
 
@@ -77,7 +67,7 @@ After running the migrations, you can start using the package by adding the `Has
 
 ```php
 use Illuminate\Database\Eloquent\Model;
-use Spatie\Relatable\HasRelatedContent;
+use Act\Relatable\HasRelatedContent;
 
 class Post extends Model
 {
@@ -156,11 +146,12 @@ Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security related issues, please email freek@spatie.be instead of using the issue tracker.
+If you discover any security related issues, please email semsphy@gmail.com instead of using the issue tracker.
 
 ## Credits
 
 - [Sebastian De Deyne](https://github.com/sebastiandedeyne)
+- [Sophy SEM](https://github.com/semsphy)
 - [All Contributors](../../contributors)
 
 ## About Spatie
