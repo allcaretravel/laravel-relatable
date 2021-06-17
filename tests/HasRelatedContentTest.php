@@ -1,10 +1,9 @@
 <?php
 
-namespace Spatie\Relatable\Test;
+namespace Act\Relatable\Test;
 
-use Spatie\Relatable\Test\TestModels\{ HasFruitAsRelatedContent, Lime };
-use Spatie\Relatable\Relatable;
-use Spatie\Relatable\Test\TestModels\Strawberry;
+use Act\Relatable\Test\TestModels\{ HasFruitAsRelatedContent, Lime };
+use Act\Relatable\Test\TestModels\Strawberry;
 
 class HasRelatedContentTest extends TestCase
 {
@@ -68,12 +67,12 @@ class HasRelatedContentTest extends TestCase
         $hasFruit = HasFruitAsRelatedContent::find(1);
         $lime = Lime::find(1);
         $strawberry = Strawberry::find(1);
-
+        
         $hasFruit->relate($lime);
         $hasFruit->relate($strawberry);
 
         $related = $hasFruit->related;
-
+        
         $this->assertCount(2, $related);
         $this->assertRelatedCollectionContains($related, $lime);
         $this->assertRelatedCollectionContains($related, $strawberry);

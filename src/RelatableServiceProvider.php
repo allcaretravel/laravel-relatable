@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Relatable;
+namespace Act\Relatable;
 
 use Illuminate\Support\ServiceProvider;
 

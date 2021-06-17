@@ -1,18 +1,18 @@
 <?php
 
-namespace Spatie\Relatable\Test;
+namespace Act\Relatable\Test;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Collection;
 use Orchestra\Testbench\TestCase as BaseTestCase;
-use Spatie\Relatable\Relatable;
-use Spatie\Relatable\Test\TestModels\{ HasFruitAsRelatedContent, Lime };
-use Spatie\Relatable\Test\TestModels\Strawberry;
+use Act\Relatable\Relatable;
+use Act\Relatable\Test\TestModels\{ HasFruitAsRelatedContent, Lime };
+use Act\Relatable\Test\TestModels\Strawberry;
 
 class TestCase extends BaseTestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -79,7 +79,7 @@ class TestCase extends BaseTestCase
 
     protected function assertRelatedCollectionContains(Collection $collection, Model $related)
     {
-        $this->assertTrue($collection->contains(function ($key, Model $item) use ($related) {
+        $this->assertTrue($collection->contains(function (Model $item, $key) use ($related) {
             return $item->id === $related->id && get_class($item) === $related->getMorphClass();
         }));
     }

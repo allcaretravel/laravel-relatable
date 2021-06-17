@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Relatable\Test\TestModels;
+namespace Act\Relatable\Test\TestModels;
 
 use Illuminate\Database\Eloquent\Model;
 
