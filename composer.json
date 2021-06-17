@@ -1,11 +1,12 @@
 {
-    "name": "spatie/laravel-relatable",
+    "name": "allcaretravel/laravel-relatable",
     "description": "Trait to manage an Eloquent model's related content",
     "keywords": [
         "spatie",
+        "allcaretravel",
         "laravel-relatable"
     ],
-    "homepage": "https://github.com/spatie/laravel-relatable",
+    "homepage": "https://github.com/allcaretravel/laravel-relatable",
     "license": "MIT",
     "authors": [
         {
@@ -13,25 +14,31 @@
             "email": "sebastian@spatie.be",
             "homepage": "https://spatie.be",
             "role": "Developer"
+        },
+        {
+            "name": "Sophy SEM",
+            "email": "sophy.s@allcaretravel.com",
+            "homepage": "https://allcaretravel.com",
+            "role": "Developer"
         }
     ],
     "require": {
-        "php" : "^7.0",
-        "illuminate/database": "^5.2",
-        "illuminate/support": "^5.2"
+        "php" : "^7.2.5|^8.0",
+        "illuminate/database": "^8.0",
+        "illuminate/support": "^8.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "5.*",
-        "orchestra/testbench": "^3.2"
+        "phpunit/phpunit": "^9.3.3",
+        "orchestra/testbench": "^6.18"
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Relatable\\": "src"
+            "Act\\Relatable\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Relatable\\Test\\": "tests"
+            "Act\\Relatable\\Test\\": "tests"
         }
     },
     "scripts": {

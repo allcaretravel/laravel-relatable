@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Relatable\Test\TestModels;
+namespace Act\Relatable\Test\TestModels;
 
 use Illuminate\Database\Eloquent\Model;
-use Spatie\Relatable\HasRelatedContent;
+use Act\Relatable\HasRelatedContent;
 
 class HasFruitAsRelatedContent extends Model
 {
