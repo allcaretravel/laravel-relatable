@@ -41,6 +41,13 @@
             "Act\\Relatable\\Test\\": "tests"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Act\\Relatable\\RelatableServiceProvider"
+            ]
+        }
+    },
     "scripts": {
         "test": "vendor/bin/phpunit"
     }
